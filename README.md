@@ -1,4 +1,4 @@
-# EditTagView https://api.travis-ci.org/AliSultan/EditTagView.svg?branch=master
+# EditTagView ![Alt text](https://api.travis-ci.org/AliSultan/EditTagView.svg?branch=master)
 
 An editview to create tags while typing into it.
 ## Download
