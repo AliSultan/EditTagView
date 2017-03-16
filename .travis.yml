@@ -23,6 +23,10 @@ android:
         #system images for emulator
         - sys-img-armeabi-v7a-android-23
 
+
+before_install:
+ - chmod +x gradlew
+
 #before_cache:
 #    - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 #
