@@ -19,6 +19,8 @@ android:
         - tools
         - build-tools-23.0.2    #Build tool version
         - android-23            #targate api version
+        - extra-google-m2repository
+        - extra-android-m2repository
 
         #system images for emulator
         - sys-img-armeabi-v7a-android-23
