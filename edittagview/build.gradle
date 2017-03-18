@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
+//apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.jfrog.bintray'
 
 android {
     compileSdkVersion 23
@@ -33,86 +33,86 @@ dependencies {
 
     compile 'org.apmem.tools:layouts:1.10@aar'
 }
-
-group = 'com.alisultan'
-version = '1.0.0'
-
-install {
-    repositories.mavenInstaller {
-        pom.project {
-            name 'EditTagView'
-            description 'A view to create tags.'
-            url 'https://github.com/AliSultan/EditTagView'
-            inceptionYear '2017'
-
-            packaging 'aar'
-            groupId 'com.alisultan'
-            artifactId 'edittagview'
-            version '1.0.0'
-
-            licenses {
-                license {
-                    name 'The Apache Software License, Version 2.0'
-                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                    distribution 'repo'
-                }
-            }
-            scm {
-                connection 'https://github.com/AliSultan/EditTagView.git'
-                url 'https://github.com/AliSultan/EditTagView'
-                developerConnection 'https://github.com/AliSultan/EditTagView.git'
-
-            }
-            developers {
-                developer {
-                    id 'alisultan'
-                    name 'Ali Sultan'
-                    email 'ali_gemini89@hotmail.com'
-                }
-            }
-        }
-    }
-}
-
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
-}
-
-task javadoc(type: Javadoc) {
-    source = android.sourceSets.main.java.srcDirs
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-
-artifacts {
-    archives javadocJar
-    archives sourcesJar
-}
-
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
-bintray {
-    user = properties.getProperty('bintray.user')
-    key = properties.getProperty('bintray.apikey')
-    configurations = ['archives']
-    pkg {
-        repo = 'maven'
-        licenses = ['Apache-2.0']
-        websiteUrl = 'https://github.com/AliSultan/EditTagView'
-        vcsUrl = 'https://github.com/AliSultan/EditTagView.git'
-        userOrg = 'alisultan89'
-        issueTrackerUrl = 'https://github.com/AliSultan/EditTagView/issues'
-        publicDownloadNumbers = true
-        publish = true
-        name = 'edittagview'
-        version {
-            name = '1.0.0'
-        }
-    }
-}
+//
+//group = 'com.alisultan'
+//version = '1.0.0'
+//
+//install {
+//    repositories.mavenInstaller {
+//        pom.project {
+//            name 'EditTagView'
+//            description 'A view to create tags.'
+//            url 'https://github.com/AliSultan/EditTagView'
+//            inceptionYear '2017'
+//
+//            packaging 'aar'
+//            groupId 'com.alisultan'
+//            artifactId 'edittagview'
+//            version '1.0.0'
+//
+//            licenses {
+//                license {
+//                    name 'The Apache Software License, Version 2.0'
+//                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//                    distribution 'repo'
+//                }
+//            }
+//            scm {
+//                connection 'https://github.com/AliSultan/EditTagView.git'
+//                url 'https://github.com/AliSultan/EditTagView'
+//                developerConnection 'https://github.com/AliSultan/EditTagView.git'
+//
+//            }
+//            developers {
+//                developer {
+//                    id 'alisultan'
+//                    name 'Ali Sultan'
+//                    email 'ali_gemini89@hotmail.com'
+//                }
+//            }
+//        }
+//    }
+//}
+//
+//task sourcesJar(type: Jar) {
+//    from android.sourceSets.main.java.srcDirs
+//    classifier = 'sources'
+//}
+//
+//task javadoc(type: Javadoc) {
+//    source = android.sourceSets.main.java.srcDirs
+//    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+//}
+//
+//task javadocJar(type: Jar, dependsOn: javadoc) {
+//    classifier = 'javadoc'
+//    from javadoc.destinationDir
+//}
+//
+//artifacts {
+//    archives javadocJar
+//    archives sourcesJar
+//}
+//
+//Properties properties = new Properties()
+//properties.load(project.rootProject.file('local.properties').newDataInputStream())
+//
+//bintray {
+//    user = properties.getProperty('bintray.user')
+//    key = properties.getProperty('bintray.apikey')
+//    configurations = ['archives']
+//    pkg {
+//        repo = 'maven'
+//        licenses = ['Apache-2.0']
+//        websiteUrl = 'https://github.com/AliSultan/EditTagView'
+//        vcsUrl = 'https://github.com/AliSultan/EditTagView.git'
+//        userOrg = 'alisultan89'
+//        issueTrackerUrl = 'https://github.com/AliSultan/EditTagView/issues'
+//        publicDownloadNumbers = true
+//        publish = true
+//        name = 'edittagview'
+//        version {
+//            name = '1.0.0'
+//        }
+//    }
+//}
