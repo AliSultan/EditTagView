@@ -13,7 +13,7 @@ env:
     - ADB_INSTALL_TIMEOUT=10    #Time out to 10 mins
 
 android:
-    update_sdk: true  #Check for the updates each time you run the build.
+#    update_sdk: true  #Check for the updates each time you run the build.
     components:
         - platform-tools
         - tools
